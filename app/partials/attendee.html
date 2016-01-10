@@ -15,7 +15,8 @@
               <h2><b>{{attendee.full_name}}</b></h2>
               <h3>{{attendee.title}}</h3>
               <h3>{{attendee.company}}</h3>
-              <p>Interests: <span ng-repeat="interest in attendee.interests">{{interest.title}} </span></p>
+              <p><b>Interests:</b> <br /><span ng-repeat="interest in attendee.interests">{{interest.title}} </span></p>
+              <p><b>Bio: </b> <br />{{attendee.bio}}</p>
             </div>
           </div>
         </a>
