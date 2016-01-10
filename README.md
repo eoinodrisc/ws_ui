@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-All you need to do is to clone this repository,
+All you need to do is to clone this repository and the api repoitory at https://github.com/eoinodrisc/ws_api,
 
 Then, install the dependencies:
 
