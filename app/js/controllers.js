@@ -8,7 +8,7 @@ angular.module('AttendeeApp.controllers', []).
     $scope.addMoreItems = function() {
       if ($scope.busy) return;
       $scope.busy = true;
-      var per_page = page === 1 ? 100 : 25
+      var per_page = (page === 1 && $scope.order === "Importance") ? 100 : 25
       
       Attendee.query({page: page, interest: $scope.order, per_page: per_page}).$promise.then(function (response) {
          for (var i = 0; i < response.length; i++) {
