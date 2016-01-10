@@ -1,0 +1,38 @@
+<section class="team">
+  <div class="container">
+    <div class="row" infinite-scroll="addMoreItems()" infinite-scroll-disabled='busy'>
+      <div class="col-md-10 col-md-offset-1">
+        <div class="col-lg-12">
+          <div class="row">
+            <form class="navbar-form navbar-left">
+
+              <h2 class="description">Web Summit Attendees</h2> 
+                <form name="myForm">
+                  <label for="singleSelect"> Order by: </label><br>
+                  <select name="singleSelect" ng-model="order" ng-change="resetAttendees()">
+                  <option value="Importance">Importance</option>
+                    <option ng-repeat="interest in interests" value="{{interest.title}}">{{interest.title}}</option>
+                  </select><br>
+                </form>
+          </div>
+          <hr>
+          <div class="row pt-md">
+            <div class="col-md-15 col-sm-3" ng-repeat="attendee in attendees">
+              <a class="profile-hover" ng-href="#/attendees/{{attendee.id}}">
+                <div class="img-box">
+                  <img src="{{attendee.thumbnail_url}}" class="img-responsive">
+                </div>
+                <div class="details">
+                  <h6><b>{{attendee.full_name}}</b></h6>
+                  <h6>{{attendee.title}}</h6>
+                  <h6>{{attendee.company}}</h6>
+                  <h6>Interests: <span ng-repeat="interest in attendee.interests">{{interest.title}} </span></h6>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
