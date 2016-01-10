@@ -28,4 +28,4 @@ http://localhost:8000/app/#/attendees
 
 * Click on an attendee in order to go to a more detailed page
 
-* Scroll to the end of the page to in order to trigger the infinte scroll and see more results
+* Scroll to the end of the page in order to trigger the infinte scroll and see more results
